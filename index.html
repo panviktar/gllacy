@@ -236,29 +236,117 @@
 
 
 
-  <div class="modal-content">
+  <div class="modal-content__feedback">
+
     <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-    <h2>Личный кабинет</h2>
-    <p>Введите пожалуйста свой логин и пароль</p>
-    <form class="login-form" action="index.html" method="post">
-      <input class="icon-user" type="text" name="login" placeholder="Логин">
-      <input class="icon-password" type="password" name="password" placeholder="Пароль">
-      <label class="login-checkbox">
-        <input type="checkbox" name="remember">
-        <span class="checkbox-indicator">  </span> Запомните меня
-      </label>
-      <a class="restore" href="#">Я забыл пароль</a>
-      <button class="btn" type="submit">Войти</button>
+
+    <h3>Мы обязательно вам ответим</h3>
+
+    <form class="feedback-form" action="index.html" method="post">
+
+      <input class="feedback-form--name" type="text" name="name" placeholder="Как вас зовут?">
+      <input class="feedback-form--mail" type="text" name="mail" placeholder="Ваша почта для ответа">
+
+      <textarea class="feedback-form--list" type="text" name="list" placeholder="Напишите что-нибудь...">
+      </textarea>
+
+      <button class="btn" type="submit">Отправть</button>
+
     </form>
-  </div>
+
+    </div>
 
 
 
-  <div class="modal-content-map">
-      <button class="modal-content-close" type="button">Закрыть</button>
+    <div class="modal-content__login">
 
-  </div>
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 
+      <form class="login-form" action="index.html" method="post">
+
+        <input class="modal-content__login--mail" type="text" name="mail" id="mail" placeholder="Электронная почта">
+
+        <input class="modal-content__login--password" type="password" name="password" id="password" placeholder="Пароль">
+
+        <div class="modal-content__enter clearfix">
+
+          <button class="btn" type="submit">Войти</button>
+
+          <div class="modal-content__enter__help">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+
+
+    <div class="modal-content__search">
+
+      <form class="search-form" action="index.html" method="post">
+
+        <input class="search-form--search" type="text" name="search" placeholder="Что ищем?">
+
+      </form>
+
+      </div>
+
+
+
+      <div class="modal-content__basket">
+
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+        <div class="modal-content__basket__product">
+
+          <div class="modal-content__basket__product--index1">
+            <div class="modal-content__basket__product__close"></div>
+            <div class="modal-content__basket__product__img"></div>
+
+            <div class="modal-content__basket__product__name">
+              <p>Пломбир с апельсиновым джемом</p>
+            </div>
+
+            <div class="modal-content__basket__product__formula">
+              1,5 кг*200 руб.
+            </div>
+
+            <div class="modal-content__basket__product__price">
+              300 руб.
+            </div>
+
+          </div>
+
+          <div class="modal-content__basket__product--index2">
+            <div class="modal-content__basket__product__close"></div>
+            <div class="modal-content__basket__product__img"></div>
+
+            <div class="modal-content__basket__product__name">
+              <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+            </div>
+
+            <div class="modal-content__basket__product__formula">
+              1,5 кг*300 руб.
+            </div>
+
+            <div class="modal-content__basket__product__price">
+              450 руб.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-content__basket__total">
+          <p>Итого: 750 руб.</p>
+          <button class="btn" type="submit">Оформить заказ</button>
+        </div>
+
+      </div>
 
 
   <script src="../js/popup.js"></script>
