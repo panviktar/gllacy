@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <meta charset="UTF-8">
+  <title>  </title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/typography_style.css">
+</head>
+
+<body>
+  <header class="main-header">
+
+    <div class="container clearfix">
+
+      <nav class="main-header__navigation">
+
+        <div class="logo">
+          <img src="img/logo_gllacy.svg" alt="" width="160px" height="65px">
+        </div>
+
+        <div class="main-header__navigation__left">
+
+          <ul>
+            <li>
+              <a href="#">  </a>
+            </li>
+            <li>
+              <a href="#">  </a>
+            </li>
+            <li>
+              <a href="#">  </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="main-header__navigation__right">
+
+          <ul>
+            <li>
+              <a href="#" class="main-header__navigation__right--search"></a>
+            </li>
+            <li> <a href="#" class="main-header__navigation__right--login"> Вход </a></li>
+            <li> <a href="#" class="main-header__navigation__right--basket"></a> Пусто </li>
+          </ul>
+
+        </div>
+
+      </nav>
+
+    <div class="main-header__contact">
+      <p class="main-header__contact--clock"></p>
+      <p class="main-header__contact--phone"></p>
+    </div>
+
+    </div>
+
+
+
+  </header>
+
+
+
+  <main class="container">
+
+    <section class="slider">
+
+      <input id="slider--slide-1" type="radio" name="slide" value="slide-1" checked="checked">
+      <input id="slider--slide-2" type="radio" name="slide" value="slide-2">
+      <input id="slider--slide-3" type="radio" name="slide" value="slide-3">
+
+      <div class="slider-controls">
+        <label for="slider--slide-1"></label>
+        <label for="slider--slide-2"></label>
+        <label for="slider--slide-3"></label>
+      </div>
+
+      <div class="slide slider--slide-1">
+        <h2>Крем-брюле <br>
+          и пломбир с малиновым джемом</h2>
+          <a href="" class="btn slider-btn"> Давайте оба! </a>
+      </div>
+
+      <div class="slide slider--slide-2">
+        <h2>Шоколадный пломбир <br>
+          и лимонный сорбет</h2>
+          <a href="" class="btn slider-btn"> Давайте оба! </a>
+      </div>
+
+      <div class="slide slider--slide-3">
+        <h2>Пломбир с помадкой<br>
+          и клубничный щербет</h2>
+          <a href="" class="btn slider-btn"> Давайте оба! </a>
+      </div>
+
+    </section>
+
+    <section class="banner">
+      <div class="banner__raspberries">
+        <h3> Малинка даром </h3>
+        <p> При покупке 2 кг любого фруктового
+        мороженного, добавим в ваш заказ банку
+        малинового варенья бесплатно</p>
+        <a href="#" class="btn btn-banner"></a>
+      </div>
+
+      <div class="chocolate__raspberries">
+        <h3> Шоколадки даром </h3>
+        <p> При покупке 2 кг пломбира, добавим в ваш
+        заказ упаковку вкуснейшей шоколадной
+         присыпки абсолютно бесплатно </p>
+        <a href="#" class="btn btn-banner"></a>
+      </div>
+
+    </section>
+
+
+  </main>
+  <footer class="main-footer">
+    <div class="container clearfix">
+      <section class="main-footer__contacts">
+
+      </section>
+
+
+      <section class="main-footer__social">
+        <a href="#" class="social-btn social-btn--vk"></a>
+        <a href="#" class="social-btn social-btn--fb"></a>
+        <a href="#" class="social-btn social-btn--inst"></a>
+      </section>
+
+
+      <section class="main-footer__copyright">
+        <p>Разработано:</p>
+        <a href="#" </a>
+      </section>
+
+
+    </div>
+  </footer>
+
+
+
+  <div class="modal-content">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <h2>Личный кабинет</h2>
+    <p>Введите пожалуйста свой логин и пароль</p>
+    <form class="login-form" action="index.html" method="post">
+      <input class="icon-user" type="text" name="login" placeholder="Логин">
+      <input class="icon-password" type="password" name="password" placeholder="Пароль">
+      <label class="login-checkbox">
+        <input type="checkbox" name="remember">
+        <span class="checkbox-indicator">  </span> Запомните меня
+      </label>
+      <a class="restore" href="#">Я забыл пароль</a>
+      <button class="btn" type="submit">Войти</button>
+    </form>
+  </div>
+
+
+
+  <div class="modal-content-map">
+      <button class="modal-content-close" type="button">Закрыть</button>
+
+  </div>
+
+
+
+  <script src="../js/popup.js"></script>
+
+
+
+  </body>
+  </html>
