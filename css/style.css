@@ -26,6 +26,9 @@ img {
   max-width: 100%;
 }
 
+textarea {
+  resize: vertical;
+}
 
 /*Выравнивание img по центру div*/
 
