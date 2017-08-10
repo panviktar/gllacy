@@ -1,12 +1,10 @@
-/*Общие стили*/
+  /*Общие стили*/
 
 body {
   min-width: 900px;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  font: 400 16px/1.375 Roboto, Arial, sans-serif;
+  color: #333333;
+  background-color: #849d8f;
 }
 
 .clearfix::after {
@@ -14,11 +12,13 @@ body {
   display: table;
   clear: both;
 }
-.container {
+
+.centerize {
   margin: 0 auto;
   width: 900px;
   padding: 0 20px;
-
+  border: 1px solid #000;
+  ;
 }
 
 img {
@@ -30,7 +30,9 @@ textarea {
   resize: vertical;
 }
 
+
 /*Выравнивание img по центру div*/
+
 
 /*.div img{
   margin: auto;
@@ -41,72 +43,306 @@ textarea {
 .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 15px 25px;
+  max-width: 200px;
+  padding: 10px 25px;
+  font-family: Roboto, Arial, sans-serif;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1;
   text-decoration: none;
-  border: none;
-  border-radius: 40px;
   outline: none;
   cursor: pointer;
-  font-family: "Roboto", "Arial", sans-serif;
-  line-height: 1.6;
-  text-align: center;
   color: #ffffff;
   text-shadow: 0 1px 4px #8e392c;
   font-weight: 500;
-  background-color: #e64e37;
-  box-shadow: 0 2px 2px #9e4334;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 2px 0 #ac1000;
+}
 
+.btn--middle {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 17px;
+}
+
+.btn--large {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+
+.btn--xxl {
+  max-width: 250px;
+  padding: 16px 43px;
+  font-size: 31.5px;
+  border-radius: 40px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.btn--narrow {
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.btn--wide {
+  padding-left: 34px;
+  padding-right: 34px;
 }
 
 .btn:hover {
-  background-color: #f07963;
-  box-shadow: 0 2px 2px #ac1000;
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
+  box-shadow: 0 2px 2px 0 #ac1000;
 }
 
 .btn:active {
-background-color: #db5238;
-box-shadow: 0 -2px 2px #952718;
+  background-image: linear-gradient(to top, #e1613e, #d74632);
+  box-shadow: inset 0 2px 2px 0 #942718;
+}
+
+.link {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  transition: all 0.15s ease-out;
+}
+
+.link:hover {
+  color: #ec593c;
+  border-bottom-color: rgba(236, 89, 60, 0.3);
+}
+
+.link:active {
+  color: #ec593c;
+  border-bottom-color: rgba(236, 89, 60, 0.3);
+}
+
+.link--alt {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.link--alt:hover {
+  color: #333333;
+  border-bottom: none;
+}
+
+.link--alt:active {
+  color: #ffbc9e;
+  border-bottom-color: rgba(249, 172, 159, 0.3);
+}
+
+.link--middle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.23;
+  border-bottom: 2px solid #333333;
 }
 
 
 /*Шапка*/
 
-
-
-.main-header {
+.page-header {
   margin-bottom: 0;
-  color: #000000;
-  background-color: #ffffff;
+  width: 900px;
+  position: relative;
 }
 
-.main-header__navigation ul {
+.page-header__logo-wrap {
+  float: left;
+  margin-left: -5px;
+  margin-right: 20px;
+  padding-top: 10px;
+  width: 165px;
+  min-height: 65px;
+}
+
+
+/*Навигация*/
+
+
+.page-nav {
+  width: 375px;
+  float: left;
+  padding-top: 23px;
+  margin-bottom: 20px;
+}
+
+.page-nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 
-.main-header__navigation li {
+.page-nav__item--catalog{
+  position: relative;
+}
+
+.page-nav__item {
   display: inline-block;
   vertical-align: top;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 0 5px 0 0;
+  transition: background-color 0.3s ease-out, box-shadow 0.1s ease-in;
+  border-radius: 30px;
+}
+
+.page-nav__item:hover{
+  background: #f7f6f3;
+}
+
+.page-nav__item:active {
+  background:#ededed;
+  box-shadow: inset 0 2px 2px 0 #686868;
+}
+
+.page-nav__item:hover .link--alt{
+  color: #333333;
+  border-bottom: none:
+}
+
+/*Всплывающее подменю*/
+
+.page-nav__submenu-list{
+position: absolute;
+left: -7px;
+top: 110%;
+box-sizing: border-box;
+min-width: 144px;
+padding: 0;
+margin: 0;
+list-style: none;
+background-color: #f8f7f4;
+border-radius: 5px;
+z-index: -1;
+opacity: 0;
+-webkit-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+        transform: translate(0, -10px);
+transition: all 0.3s ease-out;
+}
+
+.page-nav__item--catalog:hover .page-nav__submenu-list  {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.page-nav__submenu-title{
+  position: relative;
+  padding: 9px 20px 11px 20px;
+  }
+
+  .page-nav__submenu-title a{
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #343434;
+  }
+
+.page-nav__submenu-title::after{
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 9px;
+  bottom: 0;
+  height: 2px;
+  background-color: #d1d0ce;
+}
+
+.page-nav__submenu-item{
+  padding: 7px 0 7px 20px;
+  transition: all 0.3s ease;
+  }
+
+.page-nav__submenu-item a{
   font-size: 14px;
-  line-height: 1.6;
-}
-
-.main-header__navigation a {
   text-decoration: none;
-  display: block;
-  /*padding: 25px 20px;
-  color: #000000;*/
+  color: #343434;
 }
 
-.main-header__navigation a:hover {
+.page-nav__submenu-item:last-child{
+  border-radius: 0 0 5px 5px;
+}
 
+.page-nav__submenu-item:hover{
+  background: #fbded7;
+}
+
+.page-nav__submenu-item:active{
+  background: #f6b5a5;
+}
+
+/*Всплывающее подменю конец*/
+
+/*Блок пользователя*/
+
+.user-block{
+  float: right;
+  width: 265px;
+}
+
+.page-nav__item--right {
+  background: #9db1a5;
+  border-radius: 30px;
+}
+
+.page-nav__item--right a {
+  text-decoration: none;
+}
+
+.page-nav__item--search {
+  margin-left: 55px;
+  padding: 6px 11px;
+  border-radius: 30px;
+  opacity: 0;
+}
+
+.page-nav__item--login {
+  margin: 0 10px;
+  padding: 6px 15px 6px 45px;
+}
+
+.page-nav__item--basket {
+  padding: 6px 35px 6px 45px;
+}
+
+/*Контактная информация*/
+
+.contact-header {
+  position: absolute;
+  top: 90%;
+  right: 0;
+  width: 220px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.contact-header span {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-header__clock {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-header__phone {
+  font-size: 22px;
+  font-weight: 900;
 }
 
 
 /*Шапка и блок регистрации пользователя*/
-
 
 .user-block {
   /*float: right;*/
@@ -135,6 +371,7 @@ box-shadow: 0 -2px 2px #952718;
   opacity: 0.5;*/
 }
 
+
 /*.login:hover {
   background-color: #ffffff;
 }
@@ -144,10 +381,7 @@ box-shadow: 0 -2px 2px #952718;
 }*/
 
 
-
 /*Подвал*/
-
-
 
 .main-footer {
   color: #000000;
@@ -166,8 +400,7 @@ box-shadow: 0 -2px 2px #952718;
   margin: 0 2px;
   background: #000000 url("../img/spritesheet.png") no-repeat center;
   }*/
-
-/*.social-btn:hover {
+  /*.social-btn:hover {
   background: #ffffff url("../img/spritesheet.png") no-repeat center;
 }
 .social-btn-vk {
@@ -192,32 +425,25 @@ box-shadow: 0 -2px 2px #952718;
 .social-btn-inst:hover {
   background-position: -20px -22px;
 }*/
-
-/*.footer-copyright {
+  /*.footer-copyright {
 
 }*/
-
-/* Всплывающая форма регистрации пользователя*/
-
-
-
-.modal-content {
-  display: none;
-  position: fixed;
-  z-index: 30;
-  top: 120px;
-  left: 50%;
-  width: 300px;
-  margin-left: -230px;
-  padding: 50px 80px;
-  color: #000000;
-  /*background: #ffffff url("../img/pattern-white.jpg");
+  /* Всплывающая форма регистрации пользователя*/
+  .modal-content {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    top: 120px;
+    left: 50%;
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+    color: #000000;
+    /*background: #ffffff url("../img/pattern-white.jpg");
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);*/
-}
-
-
-/*Форма трясется при ошибке отправки, если поле формы не заполнено*/
-/*.modal-error{
+  }
+  /*Форма трясется при ошибке отправки, если поле формы не заполнено*/
+  /*.modal-error{
   animation: shake 0.6s;
 }
 
@@ -226,46 +452,40 @@ box-shadow: 0 -2px 2px #952718;
   10%, 30%, 50%, 70%, 90% {transform: translateY(-10px);}
   20%, 40%, 60%, 80% {transform: translateY(10px);}
 }*/
-
-.modal-content h2 {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 30px;
-  line-height: 42px;
-}
-
-.modal-content p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.modal-content .login-form {
-  margin-bottom: 10px;
-}
-
-.login-form input[type="text"], .login-form input[type="password"] {
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Arial", sans-serif;
-  text-transform: uppercase;
-  margin: 0;
-  outline: none;
-  color: #000000;
-  width: 236px;
-  border: 2px solid #000000;
-  /*margin-bottom: 10px;
+  .modal-content h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .modal-content p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .modal-content .login-form {
+    margin-bottom: 10px;
+  }
+  .login-form input[type="text"], .login-form input[type="password"] {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Arial", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    outline: none;
+    color: #000000;
+    width: 236px;
+    border: 2px solid #000000;
+    /*margin-bottom: 10px;
   padding-left: 20px;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-right: 40px;
   background-color: #f8f6f3;*/
-}
-
-/*.login-form input:focus {
+  }
+  /*.login-form input:focus {
   border-color: #663d15;
 }*/
-
-/*.login-form input.icon-user {
+  /*.login-form input.icon-user {
   background-image: url("../img/User copy 2.png");
   background-repeat: no-repeat;
   background-position: 270px 15px;
@@ -276,129 +496,112 @@ box-shadow: 0 -2px 2px #952718;
   background-repeat: no-repeat;
   background-position: 270px 15px;
 }*/
-
-.login-form .restore {
-  float: right;
-  color: #000000;
-}
-
-.login-form .btn {
-  width: 100%;
-  margin-top: 15px;
-}
-
-.login-checkbox {
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-}
-
-.login-checkbox input[type="checkbox"] {
-  display: none;
-}
-
-.login-checkbox input[type="checkbox"]+.checkbox-indicator {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  border: 2px solid #000000;
-}
-
-.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before, .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 1px;
-  width: 15px;
-  height: 2px;
-  background-color: #000000;
-}
-
-.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
-  transform: rotate(45deg);
-}
-
-.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
-  transform: rotate(-45deg);
-}
-
-.modal-content-close {
-  width: 22px;
-  height: 22px;
-  font-size: 0;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: -34px;
-  background: none;
-}
-
-.modal-content-close::after, .modal-content-close::before {
-  position: absolute;
-  content: "";
-  width: 19px;
-  height: 3px;
-  background-color: #d0d0d0;
-  border-radius: 1;
-  top: 10px;
-  left: 2px;
-}
-
-.modal-content-close::after {
-  transform: rotate(-45deg);
-}
-
-.modal-content-close::before {
-  transform: rotate(45deg);
-}
-
-
-
-/*Всплывающая карта*/
-
-
-
-.modal-content-map {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 766px;
-  height: 561px;
-  margin-top: -280px;
-  margin-left: -390px;
-  background: #e9e5dc url("../img/map.png");
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-  z-index: 30;
+  .login-form .restore {
+    float: right;
+    color: #000000;
   }
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-
-/*Класс для js, включает отображение формы+анимация выпадения из верхнего края страницы*/
-
-
-
-.modal-content-show{
-  display: block;
-  animation: bounce 0.6s;
-}
-
-@keyframes bounce {
-  0% {transform: translateY(-2000px);}
-  70% {transform: translateY(30px);}
-  90% {transform: translateY(-10px);}
-  100% {transform: translateY(0);}
-}
+  .login-form .btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .login-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  .login-checkbox input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+  }
+  .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before, .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+  }
+  .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+  }
+  .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
+  }
+  .modal-content-close {
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -34px;
+    background: none;
+  }
+  .modal-content-close::after, .modal-content-close::before {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius: 1;
+    top: 10px;
+    left: 2px;
+  }
+  .modal-content-close::after {
+    transform: rotate(-45deg);
+  }
+  .modal-content-close::before {
+    transform: rotate(45deg);
+  }
+  /*Всплывающая карта*/
+  .modal-content-map {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+    background: #e9e5dc url("../img/map.png");
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index: 30;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  /*Класс для js, включает отображение формы+анимация выпадения из верхнего края страницы*/
+  .modal-content-show {
+    display: block;
+    animation: bounce 0.6s;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+    70% {
+      transform: translateY(30px);
+    }
+    90% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

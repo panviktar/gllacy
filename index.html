@@ -7,66 +7,186 @@
 
 <head>
   <meta charset="UTF-8">
-  <title> </title>
+  <title>Gllacy Shop</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-
-
 <body>
 
+  <div class="bg">
 
+  <div class="centerize">
 
-  <header class="page-header  container">
+  <header class="page-header  clearfix">
 
-    <div class="page-header__logo-wrap  clearfix">
+    <div class="page-header__logo-wrap">
       <a href="#" class="page-header__logo-link">
-        <img src="img/logo_gllacy.svg" alt="Gllacy Shop" width="160px" height="65px">
+        <img src="img/logo--gllacy.svg" alt="Gllacy Shop" width="160px" height="65px">
       </a>
     </div>
 
-    <div class="page-header__nav-wrap">
+      <nav class="page-nav">
 
-      <nav class="main-nav">
+        <ul class="page-nav__list">
 
-        <ul class="main-nav__list">
-
-          <li class="main-nav__item  main-nav__item--catalog">
-            <a href="#">Каталог </a>
-            <ul class="main-nav__submenu  main-nav__submenu--catalog">
-              <li><a href=#>Новинки</a></li>
-              <li><a href=#>Сливочное</a></li>
-              <li><a href=#>Щербеты</a></li>
-              <li><a href=#>Фруктовый лед</a></li>
-              <li><a href=#>Мелорин</a></li>
+          <li class="page-nav__item  page-nav__item--catalog">
+            <a class="link  link--alt" href="#">Каталог </a>
+            <ul class="page-nav__submenu-list  page-nav__submenu--catalog">
+              <li class="page-nav__submenu-title">
+                <a href=#>Новинки</a>
+              </li>
+              <li class="page-nav__submenu-item">
+                <a href=#>Сливочное</a>
+              </li>
+              <li class="page-nav__submenu-item">
+                <a href=#>Щербеты</a>
+              </li>
+              <li class="page-nav__submenu-item">
+                <a href=#>Фруктовый лед</a>
+              </li>
+              <li class="page-nav__submenu-item">
+                <a href=#>Мелорин</a>
+              </li>
             </ul>
           </li>
 
-          <li>
-            <a href="#"> Доставка и оплата </a>
-          </li>
-          <li>
-            <a href="#"> О компании </a>
+          <li class="page-nav__item">
+            <a class="link  link--alt" href="#"> Доставка и оплата </a>
           </li>
 
-          <li>
-            <a href="#" class="main-nav__item  main-nav__item--search"></a>
+          <li class="page-nav__item">
+            <a class="link  link--alt" href="#"> О компании </a>
           </li>
-          <li> <a href="#" class="main-nav__item  main-nav__item--login"> Вход </a></li>
-          <li> <a href="#" class="main-nav__item  main-nav__item--basket"></a> Пусто </li>
+
         </ul>
 
       </nav>
 
-    </div>
+      <div class="page-header__user-block  user-block">
 
+        <div class="user-block__wrap">
+
+          <div class="user-block__item  user-block__item--search">
+
+              <form class="search-form" action="index.html">
+
+                <div class="search-form__wrap">
+
+                  <div class="search-form__field">
+
+                    <input class="search-form__input  search-form__input--search" id="search" type="search" name="search" required placeholder="Что ищем?">
+
+                  </div>
+
+                </div>
+
+                <button class="serch-form__btn  actions-btn" type="submit" name="search"></button>
+
+            </form>
+
+          </div>
+
+        <div class="user-block__item  user-block__item--login">
+
+          <div class="login-form__btn  actions-btn">
+            Вход
+          </div>
+
+          <div class="user-block__login-wrap">
+
+            <form class="login-form" action="index.html" method="post">
+
+              <div class="login-form__wrap">
+
+              <input class="login-form__input  login-form__input--mail" type="text" name="mail" id="mail" placeholder="Электронная почта" required>
+
+              <input class="login-form__input  login-form__input--password" type="password" name="password" id="password" placeholder="Пароль" required>
+
+              </div>
+
+              <div class="login-form__come-in  clearfix">
+
+                <button type="submit" class="btn btn--wide">Войти</button>
+
+              </div>
+
+                <div class="login-form__help">
+                  <a href="#" class="link">Забыли пароль?</a>
+                  <a href="#" class="link">Новая регистрация</a>
+                </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+        <div class="user-block__item  user-block__item--basket">
+
+          <div class="basket-form__btn  actions-btn">
+            Вход
+          </div>
+
+
+          <div class="basket-form__wrap">
+
+            <table class="basket-form__table  basket-list">
+              <tr class="basket-list__item">
+                <td class="basket-list__remove">
+                  <button class="basket-list__icon-remove" type="button" title="Удалить">Удалить</button>
+                </td>
+                <td class="basket-list__img"><img src="./img/img_product-1.jpg" alt="Фотография мороженого" width="33" height="33"></td>
+                <td class="basket-list__name">
+                  Пломбир с апельсиновым джемом
+                </td>
+                <td class="basket-list__formula">
+                  1,5 кг × 200 руб.
+                </td>
+                <td class="basket-list__price">
+                  300 руб.
+                </td>
+              </tr>
+
+              <tr class="basket-list__item">
+                <td class="basket-list__remove">
+                  <button class="basket-list__icon-remove" type="button" title="Удалить">Удалить</button>
+                </td>
+                <td class="basket-list__img"><img src="./img/img_product-1.jpg" alt="Фотография мороженого" width="33" height="33"></td>
+                <td class="basket-list__name">
+                  Клубничный пломбир с присыпкой из белого шоколада
+                </td>
+                <td class="basket-list__formula">
+                  1,5 кг × 300 руб.
+                </td>
+                <td class="basket-list__price">
+                  450 руб.
+                </td>
+              </tr>
+              <tr class="basket-list__item">
+                <td class="basket-list__total" colspan="5">Итого: 750 руб.</td>
+              </tr>
+            </table>
+
+            <div class="basket-list__btn">
+              <button type="submit" class="btn btn--narrow">Оформить заказ</button>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        </div>
+
+      </div>
 
     <div class="contact-header">
 
-      <p class="contact-header__clock"></p>
-      <p class="contact-header__phone"></p>
+      <span class="contact-header__clock"> С 10 до 20, ежедневно</span><br>
+      <span class="contact-header__phone"> 8 812 450 25 25</span>
 
     </div>
 
@@ -74,11 +194,15 @@
 
   </header>
 
+</div>
 
 
-  <main class="container">
+
+  <main>
 
 
+
+    <div class="centerize">
 
     <section class="promo-product  slider">
 
@@ -192,7 +316,12 @@
 
     </section>
 
+
+    </div>
+
     <div class="map">
+
+      <div class="centerize">
 
       <div class="map__contact">
         <p>Адрес главного офиса и офлайн магазина: <br>
@@ -204,6 +333,7 @@
 
     </div>
 
+    </div>
 
 
   </main>
@@ -212,6 +342,7 @@
 
   <footer class="page-footer  container">
 
+<div class="centerize">
 
     <div class="page-footer__social">
       <span class="social-links">
@@ -241,11 +372,12 @@
       <p>Сделано в <a href="#">html academy</a> © 2016</p>
     </div>
 
-
+</div>
 
   </footer>
 
 
+</div>
 
   <div class="modal-content-feedback">
 
@@ -269,92 +401,13 @@
 
 
 
-  <div class="modal-content-login">
-
-    <div class="modal-content-login__wrap">
-
-      <form class="login-form" action="index.html" method="post">
-
-        <input class="login-form__input  login-form__input--mail" type="text" name="mail" id="mail" placeholder="Электронная почта" required>
-
-        <input class="login-form__input  login-form__input--password" type="password" name="password" id="password" placeholder="Пароль" required>
-
-        <div class="modal-content-login__come-in  clearfix">
-
-          <button class="ligin-form-btn  btn" type="submit">Войти</button>
-
-          <div class="modal-content-login__help">
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
-          </div>
-
-        </div>
-
-      </form>
-
-    </div>
-
-  </div>
-
-
-  <div class="modal-content-search">
-
-    <form class="search-form" action="index.html" method="post">
-
-      <input class="search-form__input  search-form__input--search" type="text" name="search" placeholder="Что ищем?">
-
-    </form>
-
-  </div>
 
 
 
-  <div class="modal-content-basket">
-
-    <div class="modal-content-basket__wrap">
-
-      <table class="modal-content-basket__table">
-        <tr>
-          <td class="modal-content-basket__table-col-1">
-            <button class="modal-content-close" type="button" title="Удалить">Удалить</button>
-          </td>
-          <td class="modal-content-basket__table-col-2">
-            Пломбир с апельсиновым джемом
-          </td>
-          <td class="modal-content-basket__table-col-3">
-            1,5 кг × 200 руб.
-          </td>
-          <td class="modal-content-basket__table-col-4">
-            300 руб.
-          </td>
-        </tr>
-
-        <tr>
-          <td class="modal-content-basket__table-col-1">
-            <button class="modal-content-close" type="button" title="Удалить">Удалить</button>
-          </td>
-          <td class="modal-content-basket__table-col-2">
-          Клубничный пломбир с присыпкой из белого шоколада
-          </td>
-          <td class="modal-content-basket__table-col-3">
-            1,5 кг × 300 руб.
-          </td>
-          <td class="modal-content-basket__table-col-4">
-            450 руб.
-          </td>
-        </tr>
-
-      </table>
 
 
-    </div>
 
-    <div class="modal-content__basket__total">
-      <b>Итого: 750 руб.</b>
-      <button class="basket__total-btn btn" type="submit">Оформить заказ</button>
-    </div>
 
-  </div>
 
 
 
