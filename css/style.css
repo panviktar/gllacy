@@ -150,6 +150,7 @@ textarea {
 .page-header {
   margin-bottom: 0;
   width: 900px;
+  height: 75px;
   position: relative;
   }
 
@@ -533,8 +534,8 @@ transition: all 0.3s ease-out;
       -ms-transform: translate(0, -10px);
           transform: translate(0, -10px);
   transition: all 0.3s ease;
-  width: 510px;
-  padding: 25px 15px 20px 10px;
+  width: 530px;
+  padding: 15px 15px 20px 15px;
   background-color: #f8f7f4;
   border-radius: 5px;
 }
@@ -550,6 +551,7 @@ transition: all 0.3s ease-out;
 
 .basket-list{
   margin-bottom: 12px;
+  height: 135px;
 }
 
 .basket-list__btn {
@@ -558,7 +560,7 @@ transition: all 0.3s ease-out;
 
 .basket-list__item{
   font-size: 13px;
-}
+  }
 
 .basket-list__item td {
   vertical-align: top;
@@ -566,7 +568,6 @@ transition: all 0.3s ease-out;
 
 .basket-list__remove{
   width: 6%;
-
 }
 
 .basket-list__icon-remove{
@@ -583,7 +584,8 @@ transition: all 0.3s ease-out;
 .basket-list__icon-remove::before,
 .basket-list__icon-remove::after{
 position: absolute;
-bottom: 30%;
+top: 50%;
+left: 50%;
 content: "";
 width: 1px;
 height: 15px;
@@ -599,18 +601,18 @@ background: #353535;
 }
 
 .basket-list__img{
-  width: 7%;
-  padding: 0;
+  width: 5%;
+  padding: 8px 0 0 0;
 }
 
-.asket-list__name{
-  width: 47%;
-  padding: 15px 10px 28px 10px;
+.basket-list__name{
+  width: 50%;
+  padding: 15px 28px 15px 20px;
 }
 
 .basket-list__formula{
   width: 25%;
-  padding: 8px 10px;
+  padding: 15px 10px;
 }
 
 .basket-list__formula span{
@@ -618,13 +620,13 @@ background: #353535;
 }
 
 .basket-list__price{
-  width: 15%;
-  padding: 8px 10px;
+  width: 20%;
+  padding: 15px 10px;
 }
 
 .basket-list__total {
   position: relative;
-  padding: 0 10px;
+  padding: 15px 10px 0 10px;
   text-align: right;
   font-size: 16px;
   font-weight: 600;
@@ -637,15 +639,15 @@ background: #353535;
   background-color: #d1d0ce;
   left: 6px;
   right: 9px;
-  top: -13px;
+  top: 0;
 }
 
 /*Контактная информация*/
 
 .contact-header {
   position: absolute;
-  top: 30%;
-  right: 0;
+  top: 100%;
+  right: 1%;
   width: 220px;
   color: #ffffff;
   text-align: right;
