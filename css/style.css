@@ -1,4 +1,9 @@
+
+
+
   /*Общие стили*/
+
+
 
 body {
   min-width: 900px;
@@ -30,15 +35,7 @@ textarea {
   resize: vertical;
 }
 
-
-/*Выравнивание img по центру div*/
-
-
-/*.div img{
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}*/
+/*Кнопки*/
 
 .btn {
   display: inline-block;
@@ -97,6 +94,8 @@ textarea {
   box-shadow: 0 2px 2px 0 #ac1000;
 }
 
+/*Ссылки*/
+
 .btn:active {
   background-image: linear-gradient(to top, #e1613e, #d74632);
   box-shadow: inset 0 2px 2px 0 #942718;
@@ -141,6 +140,10 @@ textarea {
   border-bottom: 2px solid #333333;
 }
 
+/*Конец общих стилей*/
+
+
+
 
 /*Шапка*/
 
@@ -148,7 +151,7 @@ textarea {
   margin-bottom: 0;
   width: 900px;
   position: relative;
-}
+  }
 
 .page-header__logo-wrap {
   float: left;
@@ -159,12 +162,10 @@ textarea {
   min-height: 65px;
 }
 
-
 /*Навигация*/
 
-
 .page-nav {
-  width: 375px;
+  width: 365px;
   float: left;
   padding-top: 23px;
   margin-bottom: 20px;
@@ -179,6 +180,14 @@ textarea {
 
 .page-nav__item--catalog{
   position: relative;
+}
+
+.page-nav__item--catalog:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
 }
 
 .page-nav__item {
@@ -287,39 +296,355 @@ transition: all 0.3s ease-out;
 
 .user-block{
   float: right;
-  width: 265px;
+  width: 285px;
+  padding-top: 23px;
 }
 
-.page-nav__item--right {
-  background: #9db1a5;
-  border-radius: 30px;
+.user-block__item{
+  display: inline-block;
 }
 
-.page-nav__item--right a {
+.actions-btn {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  border: none;
+  text-align: center;
+  line-height: 1;
+  outline: none;
+  overflow: hidden;
   text-decoration: none;
-}
-
-.page-nav__item--search {
-  margin-left: 55px;
-  padding: 6px 11px;
   border-radius: 30px;
+  cursor: default;
+  transition: all 0.2s ease-out;
+  margin: 0;
+  }
+
+.actions-btn:hover {
+  color: #333333;
+  background-color: #f8f7f4;
+}
+
+/*Поиск*/
+.serch-form__btn{
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.search {
+  position: relative;
+  margin-right: 10px;
+}
+
+.search:after {
+  content: "";
+  position: absolute;
+  top:90%;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.search__form {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form__wrap{
+  position: absolute;
+  top: 105%;
+  right: 0;
+  z-index: -1;
   opacity: 0;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translate(0, -10px);
+      -ms-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  transition: all 0.3s ease;
+  width: 310px;
+  padding: 15px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
 }
 
-.page-nav__item--login {
-  margin: 0 10px;
-  padding: 6px 15px 6px 45px;
+.search:hover .search-form__wrap {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-.page-nav__item--basket {
-  padding: 6px 35px 6px 45px;
+.form__input--search{
+  padding: 12px;
+  width: 286px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+.form__input--search:hover{
+  border: 2px solid #c7c6c5;
+  padding: 11px 12px;
+}
+
+/*Логин*/
+
+.user-block__item--login {
+  margin-right: 10px;
+}
+
+.login-form__btn{
+  position: relative;
+  width: 45px;
+  margin: 0;
+  padding: 10px 15px 10px 45px;
+}
+
+.login-form__btn:after {
+  content: "";
+  position: absolute;
+  top:17%;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.user-block__login-wrap{
+  position: relative;
+}
+
+.login-form{
+  margin: 0;
+  padding: 0;
+  height: 175px;
+}
+
+.login-form__wrap{
+  position: absolute;
+  top: 5%;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translate(0, -10px);
+      -ms-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  transition: all 0.3s ease;
+  width: 273px;
+  padding: 20px 17px 17px 17px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.user-block__item--login:hover .login-form__wrap {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.form__input--mail,
+.form__input--password{
+  padding: 12px 15px;
+  width: 240px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+.form__input--mail{
+  margin-bottom: 10px;
+}
+
+.form__input--password{
+  margin-bottom: 15px;
+}
+
+.form__input--mail:hover,
+.form__input--password:hover {
+  border: 2px solid #c7c6c5;
+  padding: 11px 15px;
+}
+
+.login-form__come-in{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 18px;
+}
+
+.login-form__help{
+  display: inline-block;
+  vertical-align: top;
+  width: 125px;
+  margin-top: -5px;
+}
+
+.link-help{
+  font-size: 13px;
+}
+
+/*Корзина*/
+
+/*.user-block__item--basket{
+    min-width: 120px;
+}*/
+
+.basket-form__btn{
+  position: relative;
+  width: 40px;
+  margin: 0;
+  padding: 10px 32px 10px 45px;
+}
+
+.basket-form__btn:after {
+  content: "";
+  position: absolute;
+  top:17%;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.user-block__basket-wrap{
+  position: relative;
+}
+
+.basket-form{
+  margin: 0;
+  padding: 0;
+  height: 240px;
+}
+
+.basket-form__wrap{
+  position: absolute;
+  top: 5%;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translate(0, -10px);
+      -ms-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  transition: all 0.3s ease;
+  width: 510px;
+  padding: 25px 15px 20px 10px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.user-block__item--basket:hover .basket-form__wrap {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.basket-list{
+  margin-bottom: 12px;
+}
+
+.basket-list__btn {
+  text-align: right;
+}
+
+.basket-list__item{
+  font-size: 13px;
+}
+
+.basket-list__item td {
+  vertical-align: top;
+}
+
+.basket-list__remove{
+  width: 6%;
+
+}
+
+.basket-list__icon-remove{
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 32px;
+  background-color: transparent;
+  outline:none;
+  border:none;
+  font-size: 0;
+}
+
+.basket-list__icon-remove::before,
+.basket-list__icon-remove::after{
+position: absolute;
+bottom: 30%;
+content: "";
+width: 1px;
+height: 15px;
+background: #353535;
+}
+
+.basket-list__icon-remove::before{
+  transform: rotate(45deg);
+}
+
+.basket-list__icon-remove::after{
+  transform: rotate(-45deg);
+}
+
+.basket-list__img{
+  width: 7%;
+  padding: 0;
+}
+
+.asket-list__name{
+  width: 47%;
+  padding: 15px 10px 28px 10px;
+}
+
+.basket-list__formula{
+  width: 25%;
+  padding: 8px 10px;
+}
+
+.basket-list__formula span{
+  color: #7f7f7f;
+}
+
+.basket-list__price{
+  width: 15%;
+  padding: 8px 10px;
+}
+
+.basket-list__total {
+  position: relative;
+  padding: 0 10px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.basket-list__total::before{
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #d1d0ce;
+  left: 6px;
+  right: 9px;
+  top: -13px;
 }
 
 /*Контактная информация*/
 
 .contact-header {
   position: absolute;
-  top: 90%;
+  top: 30%;
   right: 0;
   width: 220px;
   color: #ffffff;
@@ -342,43 +667,7 @@ transition: all 0.3s ease-out;
 }
 
 
-/*Шапка и блок регистрации пользователя*/
 
-.user-block {
-  /*float: right;*/
-}
-
-.login {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-  /*font-size: 16px;
-  line-height: 1.6;
-  padding: 0x 0;
-  color: #000000;*/
-}
-
-.login::before {
-  content: "";
-  position: absolute;
-  /*width: 0;
-  height: 0;
-  top: 0x;
-  left: 0;
-  background: url("../img/spritesheet.png") no-repeat;
-  background-position: 0 0;
-  opacity: 0.5;*/
-}
-
-
-/*.login:hover {
-  background-color: #ffffff;
-}
-
-.login:hover::before {
-  opacity: 1;
-}*/
 
 
 /*Подвал*/
