@@ -171,7 +171,7 @@
                 </table>
 
                 <div class="basket-list__btn">
-                  <button type="submit" class="btn btn--narrow">Оформить заказ</button>
+                  <button type="submit" class="btn btn--wide">Оформить заказ</button>
                 </div>
 
               </div>
@@ -330,22 +330,31 @@
 
     </section>
 
-    <section class="news">
+    <div class="news">
 
       <div class="news__new">
         <p>Новое в нашем блоге</p>
-        <h3>10 способов сервировки фруктовых щербетов к столу</h3>
+
+        <div class="news__wrap-link">
+          <a class="news__link" href="#">10 способов сервировки <br>
+          фруктовых щербетов <br>
+          к столу</a>
+        </div>
+
       </div>
 
       <div class="news__sending">
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-        <form action="">
-          <input type="text" name="mail" value="mail" placeholder="Электронная почта">
-          <button type="submit" name="button" class="news-btn btn"> Отправить</button>
+        <p>Подпишитесь на нашу сладкую рассылку <br>
+        и будете всегда в курсе всего самого вкусного, <br>
+        что у нас происходит. Обещаем не спамить и не <br>
+        слать всякой не нужной ерунды. Честно =) </p>
+        <form action="" class="news__form">
+          <input class="news__input" type="text" name="mail"  placeholder="Электронная почта">
+          <button type="submit" name="button" class="btn btn--new">Отправить</button>
         </form>
       </div>
 
-    </section>
+    </div>
 
 
     </div>
@@ -354,12 +363,27 @@
 
       <div class="centerize">
 
-      <div class="map__contact">
-        <p>Адрес главного офиса и офлайн магазина: <br>
-          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b> </p>
-        <p>Для заказов по телефону:<br>
-          <b>8 812 450-25-25</b><br> (с 10 до 20 ежедневно)</p>
-        <a href="#" class="map-btn  btn">Форма обратной связи</a>
+      <div class="map__wrap">
+
+        <div class="map__contact">
+
+          <div class="map__contact-wrap">
+            <p class="map__contact-text  map__contact-text--address">
+              Адрес главного офиса и <br>
+              офлайн магазина: <br>
+              <span><b>ул. Большая Конюшенная <br>
+              19/8, Санкт-Петербург</b></span>
+            </p>
+            <p class="map__contact-text  map__contact-text--tel">
+              Для заказов по телефону: <br>
+              <span><b>8 812 450-25-25</b></span>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a href="#" class="btn  btn--narrow"> Форма обратной связи </a>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -371,9 +395,9 @@
 
 
 
-  <footer class="page-footer  container">
+  <footer class="page-footer">
 
-<div class="centerize">
+<div class="centerize  clearfix">
 
     <div class="page-footer__social">
       <span class="social-links">
@@ -384,23 +408,18 @@
         </span>
     </div>
 
-    <div class="page-footer__info  clearfix">
-
-      <div class="page-footer__info-colum page-footer__info-colum--left ">
-        <a href="#">Для поставщиков</a>
-        <a href="#">О производстве</a>
-      </div>
-
-      <div class="page-footer__info-colum page-footer__info-colum--right">
-        <a href="#">Наши документы</a>
-        <a href="#">Экологические стандарты</a>
-      </div>
-
+    <div class="page-footer__info">
+      <span class="info-links">
+        <a class="info-link" href="#">Для поставщиков</a>
+        <a class="info-link  info-link--left" href="#">Наши документы</a>
+        <a class="info-link" href="#">О производстве</a>
+        <a class="info-link  info-link--left" href="#">Экологические стандарты</a>
+      </span>
     </div>
 
     <div class="page-footer__copyright">
-      <img src="img/logo_academy.svg" alt="" width="110px" height="40px">
-      <p>Сделано в <a href="#">html academy</a> © 2016</p>
+      <img class="page-footer__img-logo" src="img/logo--academy.svg" alt="" width="110px" height="40px">
+      <p>Сделано в <a href="#">HTML academy</a> © 2016</p>
     </div>
 
 </div>
