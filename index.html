@@ -260,51 +260,105 @@
 
         </section>
 
-        <div class="catalog">
+        <section class="catalog">
 
-          <div class="catalog__item  catalog__item--1">
-            <div class="catalog__image  catalog__image--1">
-              <span class="catalog__price">310 Ꝑ
-            <span class="catalog__price-small">/кг</span>
+          <article class="catalog__col product">
+
+          <div class="product__item  product__item--1">
+
+            <div class="product__image  product__image--1">
+              <span class="product__price">310 Ꝑ
+            <span class="product__price-small">/кг</span>
               </span>
             </div>
-            <span class="catalog__info">Сливочное с апельсиновым джемом <br>
-          и цитрусовой стружкой</span>
+
+          <h2 class="product__title">
+            <a class="product__link" href="#">Сливочное с апельсиновым джемом <br>
+          и цитрусовой стружкой</a>
+          </h2>
+
+          <div class="product__actions">
+            <a href="#" class="product__btn  btn">Быстрый просмотр</a>
           </div>
 
-          <div class="catalog__item  catalog__item--2">
-            <div class="catalog__image  catalog__image--2">
-              <span class="catalog__price">380 Ꝑ
-            <span class="catalog__price-small">/кг</span>
+          </div>
+
+          </article>
+
+          <article class="catalog__col product">
+
+          <div class="product__item  product__item--2">
+
+            <div class="product__image  product__image--2">
+              <span class="product__price">380 Ꝑ
+            <span class="product__price-small">/кг</span>
               </span>
             </div>
-            <span class="catalog__info">Сливочно-кофейное с <br>
-          кусочками шоколада</span>
+
+            <h2 class="product__title">
+              <a class="product__link" href="#">Сливочно-кофейное с <br>
+          кусочками шоколада </a>
+            </h2>
+
+          <div class="product__actions">
+            <a href="#" class="product__btn  btn">Быстрый просмотр</a>
           </div>
 
-          <div class="catalog__item  catalog__item--3">
-            <div class="catalog__image  catalog__image--3">
-              <span class="catalog__price">355 Ꝑ
-            <span class="catalog__price-small">/кг</span>
+          </div>
+
+          </article>
+
+          <article class="catalog__col product">
+
+          <div class="product__item  product__item--3">
+
+            <div class="product__image  product__image--3">
+              <span class="product__price">355 Ꝑ
+            <span class="product__price-small">/кг</span>
               </span>
             </div>
-            <span class="catalog__info">Сливочно-клубничное с <br>
-          присыпкой из белого <br>
-          шоколада</span>
+
+            <h2 class="product__title">
+              <a class="product__link" href="#">Сливочно-клубничное с <br>
+            присыпкой из белого <br>
+            шоколада</a>
+            </h2>
+
+          <div class="product__actions">
+            <a href="#" class="product__btn  btn">Быстрый просмотр</a>
           </div>
 
-          <div class="catalog__item  catalog__item--4">
-            <div class="catalog__image  catalog__image--4">
-              <span class="catalog__price">415 Ꝑ
-          <span class="catalog__price-small">/кг</span>
+          </div>
+
+          </article>
+
+          <article class="catalog__col product">
+
+          <div class="product__item  product__item--4">
+
+            <div class="product__image  product__image--4">
+              <span class="product__price">415 Ꝑ
+            <span class="product__price-small">/кг</span>
               </span>
             </div>
-            <span class="catalog__info">Сливочное крем-брюле <br>
-          с карамельной <br>
-          подливкой</span>
+
+            <h2 class="product__title">
+              <a class="product__link" href="#">Сливочное крем-брюле <br>
+            с карамельной <br>
+            подливкой</a>
+            </h2>
+
+          <div class="product__actions">
+            <a href="#" class="product__btn  btn">Быстрый просмотр</a>
           </div>
 
-        </div>
+          </div>
+
+</article>
+        </section>
+
+
+
 
         <section class="seo">
 
@@ -325,7 +379,7 @@
             <p>Новое в нашем блоге</p>
 
             <div class="news__wrap-link">
-              <a class="news__link" href="#">10 способов сервировки <br>
+              <a class="link  link--middle" href="#">10 способов сервировки <br>
           фруктовых щербетов <br>
           к столу</a>
             </div>
@@ -393,17 +447,25 @@
         </div>
 
         <div class="page-footer__info">
-          <span class="info-links">
-        <a class="info-link" href="#">Для поставщиков</a>
-        <a class="info-link  info-link--left" href="#">Наши документы</a>
-        <a class="info-link" href="#">О производстве</a>
-        <a class="info-link  info-link--left" href="#">Экологические стандарты</a>
-      </span>
+          <ul class="page-footer__info-list">
+            <li class="page-footer__info-item">
+              <a class="link link--alt  link--info" href="#">Для поставщиков</a>
+            </li>
+            <li class="page-footer__info-item  page-footer__info-item--left">
+              <a class="link link--alt  link--info" href="#">Наши документы</a>
+            </li>
+            <li class="page-footer__info-item">
+                <a class="link link--alt  link--info" href="#">О производстве</a>
+            </li>
+            <li class="page-footer__info-item  page-footer__info-item--left">
+              <a class="link  link--alt  link--info" href="#">Экологические стандарты</a>
+            </li>
+        </ul>
         </div>
 
         <div class="page-footer__copyright">
           <img class="page-footer__img-logo" src="img/logo--academy.svg" alt="" width="110px" height="40px">
-          <p>Сделано в <a href="#">HTML academy</a> © 2016</p>
+          <p>Сделано в <a class="link  link--alt" href="#">HTML academy</a> © 2016</p>
         </div>
 
       </div>
@@ -435,9 +497,6 @@
     </form>
 
   </div>
-
-
-
 
 
 
