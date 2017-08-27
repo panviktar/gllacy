@@ -92,8 +92,6 @@
 
             <form class="login-form" action="index.html" method="post">
 
-              <div class="login-form__wrap">
-
                 <input class="form__input  form__input--mail" type="text" name="mail" id="mail" placeholder="Электронная почта" required>
 
                 <input class="form__input  form__input--password" type="password" name="password" id="password" placeholder="Пароль" required>
@@ -108,9 +106,6 @@
                   <a href="#" class="link  link-help">Забыли пароль?</a>
                   <a href="#" class="link  link-help">Новая регистрация</a>
                 </div>
-
-              </div>
-
 
             </form>
 
@@ -130,9 +125,7 @@
 
             <form class="basket-form" action="index.html" method="post">
 
-              <div class="basket-form__wrap">
-
-                <table class="basket-form__table  basket-list">
+              <table class="basket-form__table  basket-list">
                   <tr class="basket-list__item">
                     <td class="basket-list__remove">
                       <button class="basket-list__icon-remove" type="button" title="Удалить"></button>
@@ -173,8 +166,6 @@
                 <div class="basket-list__btn">
                   <button type="submit" class="btn btn--wide">Оформить заказ</button>
                 </div>
-
-              </div>
 
             </form>
 
@@ -223,9 +214,9 @@
 
 
 
-      <form class="filters" action="#" method="get">
+      <form class="filters  clearfix" action="#" method="get">
 
-        <fieldset class="filters__item filter-sort">
+        <fieldset class="filters__item  filter-sort">
           <legend class="filters__title">Сортировка</legend>
           <div class="filter-sort__field">
             <select class="select" name="sort" id="sort">
@@ -238,23 +229,28 @@
           </div>
         </fieldset>
 
-        <fieldset class="filters__item filter-price">
+        <fieldset class="filters__item  filter-price">
           <legend class="filters__title"> Цена 100 руб. - 500 руб. </legend>
           <div class="filter-price__controls">
 
             <div class="filter-price__scale">
-              <div class="filter-price__bar"></div>
-            </div>
 
-            <div class="filter-price__toggle  filter-price__toggle--min"></div>
+              <div class="filter-price__bar">
 
-            <div class="filter-price__toggle  filter-price__toggle--max"></div>
+                <div class="filter-price__toggle  filter-price__toggle--min">
+                </div>
+
+                <div class="filter-price__toggle  filter-price__toggle--max">
+                </div>
+                </div>
+
+              </div>
 
           </div>
 
         </fieldset>
 
-        <fieldset class="filters__item  filter-radio">
+        <fieldset class="filters__item   filter-radio">
           <legend class="filters__title"> Жирность </legend>
 
           <div class="filter-radio__field">
@@ -318,7 +314,7 @@
         </fieldset>
 
         <div class="filters__button">
-          <a href="#" class="btn">Применить</a>
+          <button class="plain-btn" type="submit">Применить</button>
         </div>
 
 
