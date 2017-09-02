@@ -7,12 +7,6 @@ body {
   background-color: #849d8f;
 }
 
-.bg {
-  background: #849d8f url("../img/bg_slider-1.jpg") no-repeat 50% 0;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  transition: all 0.3s ease;
-}
 
 .bg__line {
   height: 1px;
@@ -85,14 +79,13 @@ textarea {
 }
 
 .btn--xxl {
-  max-width: 250px;
+  display: block;
+  max-width: 200px;
   padding: 16px 43px;
   font-size: 31.5px;
   border-radius: 40px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  position: absolute;
-  left: 33%;
-  top: 125%;
+  margin: 0 auto;
 }
 
 .btn--wide {
@@ -361,7 +354,6 @@ textarea {
   text-decoration: none;
   border-radius: 30px;
   cursor: default;
-  transition: all 0.2s ease-out;
   margin: 0;
 }
 
@@ -379,6 +371,13 @@ textarea {
   margin: 0;
   padding: 0;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2) url("../img/sprite/sprite.png");
+  background-position: -7px 733px;
+}
+
+.serch-form__btn:hover{
+  background: #ffffff url("../img/sprite/sprite.png");
+  background-position: -7px 686px;
 }
 
 .search {
@@ -440,6 +439,7 @@ textarea {
 }
 
 
+
 /*Логин*/
 
 .user-block__item--login {
@@ -452,6 +452,13 @@ textarea {
   margin: 0;
   width: 37px;
   padding: 10px 15px 10px 45px;
+  background: rgba(255, 255, 255, 0.2) url("../img/sprite/sprite.png");
+  background-position: 0 832px;
+}
+
+.login-form__btn:hover{
+  background: #ffffff url("../img/sprite/sprite.png");
+  background-position: 0 783px;
 }
 
 .user-block__item--login:after {
@@ -544,6 +551,12 @@ textarea {
   width: 35px;
   margin: 0;
   padding: 10px 32px 10px 45px;
+  background: rgba(255, 255, 255, 0.2) url("../img/sprite/icon__navigation__basket.png") no-repeat 13px 7px;
+
+}
+
+.basket-form__btn:hover{
+  background: #ffffff url("../img/sprite/icon__navigation__basket--hover.png") no-repeat 13px 7px;
 }
 
 .user-block__item--basket:after {
@@ -709,16 +722,16 @@ textarea {
 
 /*Слайдер*/
 
-.slide {
-  display: none;
-  overflow: hidden;
-}
 
 .promo-product {
   position: relative;
-  margin-top: 325px;
-  margin-bottom: 135px;
-}
+  margin-top: 470px;
+  }
+
+.promo-product__button{
+    margin-bottom: 40px;
+    width: 100%;
+  }
 
 .slider__input {
   display: none;
@@ -727,7 +740,7 @@ textarea {
 .slider-controls {
   position: absolute;
   left: 0;
-  top: 145%;
+  top: 33%;
   width: 102px;
   line-height: 10px;
   text-align: center;
@@ -753,18 +766,16 @@ textarea {
   background-color: #ffffff;
 }
 
-#slide-1:checked~.slide--1, #slide-2:checked~.slide--2, #slide-3:checked~.slide--3 {
-  display: block;
+.bg  {
+  background: #849d8f url("../img/bg_slider-1.jpg") no-repeat 50% 0;
 }
 
-.promo-product__title {
-  position: relative;
-  font-size: 60px;
-  line-height: 61px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #ffffff;
+#slide-2:checked~.bg{
+  background: #8996a6 url("../img/bg_slider-2.jpg") no-repeat 50% 0;
+}
+
+#slide-3:checked~.bg{
+    background: #9d8b84 url("../img/bg_slider-3.jpg") no-repeat 50% 0;
 }
 
 /*Баннер*/
@@ -988,12 +999,40 @@ position: relative;
 }
 
 .seo__info {
+  position: relative;
   width: 345px;
   display: inline-block;
   vertical-align: top;
   padding: 22px 0 0 55px;
   margin: 0;
 }
+
+.seo__info::after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.seo__info--ice-cream::after{
+  background: url("../img/sprite/icon__seo__icecreem.png");
+}
+
+.seo__info--eco::after{
+  background: url("../img/sprite/icon__seo__eco.png");
+}
+
+.seo__info--made::after{
+  background: url("../img/sprite/icon__seo__made.png");
+}
+
+.seo__info--delivery::after{
+  background: url("../img/sprite/icon__seo__delivery.png");
+}
+
+
 
 .seo__info--ice-cream, .seo__info--eco {
   margin-right: 20px;
@@ -1138,39 +1177,51 @@ position: relative;
   border-radius: 50%;
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.1s ease-in;
-  background: #000000 url("../img/spritesheet.png") no-repeat center;
 }
 
+.social-link:hover {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.98);
+  }
 
-/*.social-btn:hover {
-  background: #ffffff url("../img/spritesheet.png") no-repeat center;
-}
-.social-btn-vk {
-  background-position: -32px -55px;
-}
+  .social-link:active {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 2px 1px 0 #888888 inset;
+    color: #e9e9e9;
+  }
 
-.social-btn-fb {
-  background-position: -40px -22px;
-}
-
-.social-btn-inst {
-  background-position: -73px -27px;
+  .social-link--tv{
+  background: url("../img/sprite/icon__social--itwitter.png") no-repeat center;
 }
 
-.social-btn-vk:hover {
-  background-position: 5px -55px;
-}
-.social-btn-fb:hover {
-  background-position: -70px 7px;
+.social-link--vk{
+  background: url("../img/sprite/icon__social--ivk.png") no-repeat center;
 }
 
-.social-btn-inst:hover {
-  background-position: -20px -22px;
-}*/
+.social-link--fb{
+  background: url("../img/sprite/icon__social--fb.png") no-repeat center;
+}
+
+.social-link--in{
+  background: url("../img/sprite/icon__social--inst.png") no-repeat center;
+}
 
 .page-footer__info {
   float: left;
   vertical-align: top;
+}
+
+.page-footer__info{
+  position: relative;
+}
+
+.page-footer__info::after{
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url("../img/sprite/icon__social--like.png") no-repeat;
 }
 
 .page-footer__info-list {
@@ -1743,25 +1794,18 @@ background: #9db1a5;
 }
 
 .feedback__input:hover{
-  border: 2px solid #c7c6c5;
-}
+  border: 1px solid #c7c6c5;
+  box-shadow: 1px 1px 0 #c7c6c5 inset, -1px -1px 0 #c7c6c5 inset;
+  }
 
 .feedback__input:focus{
-  border: 2px solid #8fbdec;
+  border: 1px solid #8fbdec;
 }
 
 /*Форма трясется при ошибке отправки, если поле формы не заполнено*/
 
 
-/*.modal-error{
-  animation: shake 0.6s;
-}
 
-@keyframes shake {
-  0%, 100% {transform: translateY(0);}
-  10%, 30%, 50%, 70%, 90% {transform: translateY(-10px);}
-  20%, 40%, 60%, 80% {transform: translateY(10px);}
-}*/
 
 
 
@@ -1819,6 +1863,16 @@ background: #9db1a5;
 .modal-content-show {
   display: block;
   animation: bounce 0.6s;
+}
+
+.modal-error{
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateY(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateY(-10px);}
+  20%, 40%, 60%, 80% {transform: translateY(10px);}
 }
 
 @keyframes bounce {
